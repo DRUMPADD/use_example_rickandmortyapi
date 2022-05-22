@@ -1,38 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Poppins:wght@300&display=swap');
+
+body {
+  font-family: 'Heebo', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  background-color: #7dddf4;
+}
+
+header ul {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+ul > li {
+  padding: 15px;
+  margin: 0 10px;
+  border-radius: 5px;
+  color: #000;
+  font-weight: 1000;
+}
+
+li > a {
+  transition: .10s ease-in;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+li > a:hover {
+  color: #eee;
+}
+
 .App {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app-h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table th, table td {
+  width: 100%;
+  border: 3px solid #ddd;
+  padding: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+  display: block;
+  margin: 10px auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+  appearance: none;
+  border: none;
+  display: block;
+  margin: 10px auto;
+  width: 400px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+input[type="text"], input[type="url"], input[type="date"] {
+  border: 3px solid #04AA6D;
+}
+
+input[type="file"] {
+  background-color: #04AA6D;
+}
+input[type="submit"] {
+  background-color: #08AA5D;
+  text-transform: uppercase;
+  border: 2px solid #eee;
+  font-weight: 600;
+  color: #eee;
+  transition: .3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #eee;
+  border: 2px solid #08AA5D;
+  color: #08AA5D;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  gap: 30px;
+}
+
+.card-body {
+  font-weight: 600;
+  background-color: #20242d;
+  border-radius: 8px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-img > img {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  width: 200px;
+}
+.card-text {
+  margin-left: 20px;
+  color: #eee;
 }
